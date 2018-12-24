@@ -19,6 +19,8 @@ RUN apk add --update \
     php7-openssl \
     php7-pdo \
     php7-pdo_mysql \
+    php7-pdo_pgsql \
+    php7-pgsql \
     php7-mysqli \
     php7-xml \
     php7-zlib \
@@ -28,6 +30,7 @@ RUN apk add --update \
     php7-simplexml \
     php7-xdebug \
     php7-zip \
+    php7-soap \
     nodejs \
     yarn \
     npm \
