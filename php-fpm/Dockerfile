@@ -2,10 +2,18 @@ FROM alpine:3.8
 
 RUN apk add --update \
     openrc \
+    file \
+    re2c \
+    autoconf \
+    make \
+    zlib \
+    zlib-dev \
+    g++ \
     php7-fpm \
     php7-apcu \
     php7-ctype \
     php7-curl \
+    php7-dev \
     php7-dom \
     php7-gd \
     php7-iconv \
@@ -17,6 +25,7 @@ RUN apk add --update \
     php7-mbstring \
     php7-opcache \
     php7-openssl \
+    php7-pear \
     php7-pdo \
     php7-pdo_mysql \
     php7-pdo_pgsql \
@@ -36,7 +45,8 @@ RUN apk add --update \
     npm \
     make \
     curl \ 
-    git 
+    git \
+    mc
 
 RUN rm -rf /var/cache/apk/* && rm -rf /tmp/* && \
     curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
