@@ -19,7 +19,7 @@ services:
         volumes:
             - redisdata:/data
     php:
-        build: ./php-fpm
+        image: jbregant/docker-symfony4:php-fpm
         ports:
             - "9000:9001"
         volumes:
@@ -30,7 +30,7 @@ services:
         extra_hosts:
             - "docker-host.localhost:192.168.1.51"
     nginx:
-        build: ./nginx
+        image: jbregant/docker-symfony4:nginx
         ports:
             - "80:80"
         links:
