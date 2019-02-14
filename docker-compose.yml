@@ -6,8 +6,8 @@ services:
         ports:
             - "5432:5432"
         environment:
-            POSTGRES_USER: kahless
-            POSTGRES_PASSWORD: lalala
+            POSTGRES_USER: symfony
+            POSTGRES_PASSWORD: symfony
             POSTGRES_DB: symfony4_project
         volumes:
             - pgdata:/var/lib/postgresql/data
